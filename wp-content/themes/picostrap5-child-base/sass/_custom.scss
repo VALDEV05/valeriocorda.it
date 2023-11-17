@@ -1,7 +1,20 @@
-/*
-***
-* valeriocorda.it
-***
+/**
+*
+*
+**   ██╗   ██╗ █████╗ ██╗     ███████╗██████╗ ██╗ ██████╗  ██████╗ ██████╗ ██████╗ ██████╗  █████╗    ██╗████████╗
+**   ██║   ██║██╔══██╗██║     ██╔════╝██╔══██╗██║██╔═══██╗██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔══██╗   ██║╚══██╔══╝
+**   ██║   ██║███████║██║     █████╗  ██████╔╝██║██║   ██║██║     ██║   ██║██████╔╝██║  ██║███████║   ██║   ██║   
+**   ╚██╗ ██╔╝██╔══██║██║     ██╔══╝  ██╔══██╗██║██║   ██║██║     ██║   ██║██╔══██╗██║  ██║██╔══██║   ██║   ██║   
+**    ╚████╔╝ ██║  ██║███████╗███████╗██║  ██║██║╚██████╔╝╚██████╗╚██████╔╝██║  ██║██████╔╝██║  ██║██╗██║   ██║   
+**     ╚═══╝  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝  ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝   ╚═╝
+*
+**   @author Valerio Corda
+**   @email info@valeriocorda.it
+**   @website https://valeriocorda.it
+*
+**   If you can dream it, I can code it.
+*
+****************************************
 *  SCSS TABLE OF CONTENTS
 *   
 *  1.0 - Variables
@@ -24,7 +37,13 @@
    1.0  Variables
    ========================================================================== */
 
-@import url('./custom-valeriocorda_it/variables.scss');
+$color-green: #333D29;
+$font-default: SocialVariable;
+@font-face {
+    font-family: SocialVariable;
+    src: url("../../../../../webfont/ABCSocialVariable.woff2") format("woff2"), url("../../../../../webfont/ABCSocialVariable.woff") format("woff");
+}
+
 
 /* ==========================================================================
 
@@ -45,13 +64,6 @@
     4.0 - Globals
    
     ========================================================================== */
-
-$color-green: #333D29;
-$font-default: SocialVariable;
-@font-face {
-    font-family: SocialVariable;
-    src: local("../../../../../webfont/ABCSocialVariable.woff2") format("woff2"), local("../../../../../webfont/ABCSocialVariable.woff") format("woff");
-}
 
 body {
     font-family: $font-default;

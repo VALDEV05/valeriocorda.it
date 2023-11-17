@@ -10,3 +10,4 @@
 1. Reset a template Partials
 2. Worked in /wp-content/themes/picostrap5-child-base/sass/_custom.scss
 3. Add tablet of content and webfont custom
+4. worked on style
