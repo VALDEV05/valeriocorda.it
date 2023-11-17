@@ -27,3 +27,13 @@
 8. Aggiunta la functions Init per creare una coerenza stilistica al codice
 9. Aggiunta la funzione per prendere il menu da shortcode e dinamicamente popola un altro campo
 10. Aggiunto Stile per la navbar
+
+
+
+=========
+reference menu
+
+- https://codepen.io/bws_dan/pen/OJWPMPL
+- https://codepen.io/alphardex/pen/OJPmQGz
+
+=========
