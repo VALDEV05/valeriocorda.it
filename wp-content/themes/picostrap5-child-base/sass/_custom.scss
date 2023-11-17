@@ -248,6 +248,9 @@ body {
             transform: translateY(200vh);
             animation: var(--name) var(--duration) linear infinite;
             z-index: 1;
+            &_mobile {
+                width: 18vw;
+            }
             &.video {
                 min-height: 60vh;
                 height: auto;
@@ -262,62 +265,62 @@ body {
                 animation-delay: 0s;
             }
             &:nth-child(2) {
-                animation-delay: -3s;
+                animation-delay: -2s;
             }
             &:nth-child(3) {
-                animation-delay: -6s;
+                animation-delay: -4s;
             }
             &:nth-child(4) {
-                animation-delay: -9s;
+                animation-delay: -6s;
             }
             &:nth-child(5) {
-                animation-delay: -12s;
+                animation-delay: -8s;
             }
             &:nth-child(6) {
-                animation-delay: -15s;
+                animation-delay: -10s;
             }
             &:nth-child(7) {
-                animation-delay: -18s;
+                animation-delay: -12s;
             }
             &:nth-child(1) {
                 --name: float-up-1;
-                --duration: calc(20s * 1);
+                --duration: calc(30s * 1);
                 left: 2vw;
                 z-index: -1;
             }
             &:nth-child(2) {
                 --name: float-up-3;
-                --duration: calc(20s * 3);
+                --duration: calc(30s * 3);
                 left: 10vw;
                 z-index: -3;
             }
             &:nth-child(3) {
                 --name: float-up-2;
-                --duration: calc(20s * 2);
+                --duration: calc(30s * 2);
                 left: 42vw;
                 z-index: -2;
             }
             &:nth-child(4) {
                 --name: float-up-1;
-                --duration: calc(20s * 1);
+                --duration: calc(30s * 1);
                 left: 36vw;
                 z-index: -1;
             }
             &:nth-child(5) {
                 --name: float-up-3;
-                --duration: calc(20s * 3);
+                --duration: calc(30s * 3);
                 left: 62vw;
                 z-index: -3;
             }
             &:nth-child(6) {
                 --name: float-up-2;
-                --duration: calc(20s * 2);
+                --duration: calc(30s * 2);
                 left: 15vw;
                 z-index: -2;
             }
             &:nth-child(7) {
                 --name: float-up-2;
-                --duration: calc(20s * 2);
+                --duration: calc(30s * 2);
                 left: 55vw;
                 z-index: -2;
             }
@@ -335,25 +338,25 @@ body {
             } */
             /* &:nth-child(8) {
                 --name: float-up-3;
-                --duration: calc(20s * 3);
+                --duration: calc(30s * 3);
                 left: -vw;
                 z-index: -3;
             }
             &:nth-child(9) {
                 --name: float-up-1;
-                --duration: calc(20s * 1);
+                --duration: calc(30s * 1);
                 left: 62vw;
                 z-index: -1;
             }
             &:nth-child(10) {
                 --name: float-up-2;
-                --duration: calc(20s * 2);
+                --duration: calc(30s * 2);
                 left: 0vw;
                 z-index: -2;
             }
             &:nth-child(11) {
                 --name: float-up-3;
-                --duration: calc(20s * 2);
+                --duration: calc(30s * 2);
                 left: 52vw;
                 z-index: -2;
             }
@@ -363,13 +366,13 @@ body {
             }
             &:nth-child(8) {
                 --name: float-up-3;
-                --duration: calc(20s * 3);
+                --duration: calc(30s * 3);
                 left: 18vw !important;
                 z-index: -3;
             }
             &:nth-child(10) {
                 --name: float-up-2;
-                --duration: calc(20s * 2);
+                --duration: calc(30s * 2);
                 left: 24vw !important;
                 z-index: -2;
             } */
@@ -400,14 +403,22 @@ body {
         }
     }
     .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 200px;
-        width: 60vw;
-        transform: translate(-50%, -50%);
-        z-index: 99;
-        background-color: red;
+        mix-blend-mode: difference;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+        .container-text {
+            font-size: 45px;
+            font-weight: 500;
+        }
     }
 }
 
