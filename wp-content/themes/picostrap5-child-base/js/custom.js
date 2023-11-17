@@ -1,8 +1,14 @@
-// to enable the enqueue of this optional JS file, 
-// you'll have to uncomment a row in the functions.php file
-// just read the comments in there mate
+function init() {
 
-console.log("Custom js file loaded");
+    menuReplaceInContainer();
+}
 
-//add here your own js code. Vanilla JS welcome.
 
+function menuReplaceInContainer() {
+    const headerLocation = jQuery('#lc-header .site-header .container .row .container-right .container-right-menu-dynamic');
+    const headerMenu = jQuery('body>.container-element-dynamic .menu-primarymenu-container');
+    jQuery(headerLocation).append(headerMenu);
+}
+
+
+jQuery(document).ready(init);

@@ -57,3 +57,23 @@ add_filter( 'wp_is_application_passwords_available', '__return_false' );
 
 // ADD YOUR CUSTOM PHP CODE DOWN BELOW /////////////////////////
 
+
+//==============================================================
+//Shortcode to Display Menus
+//==============================================================
+
+function custom_menu_shortcode($attr){
+
+    $args = shortcode_atts(array(
+
+        'name'  => '',
+        'class' => ''
+
+    ), $attr);
+
+    return wp_nav_menu( array(
+        'menu'             => $args['name'],
+        'menu_class'    => $args['class']
+    ));
+}
+add_shortcode('addmenu', 'custom_menu_shortcode');
