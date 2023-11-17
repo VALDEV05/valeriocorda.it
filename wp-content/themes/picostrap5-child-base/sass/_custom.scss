@@ -216,13 +216,200 @@ body {
 
 /* ==========================================================================
     6.0 - Footer
-
    ========================================================================== */
 
 
 /* ==========================================================================
     7.0 - Home
    ========================================================================== */
+
+
+/* 7.1 - Home -> Intro */
+
+.container-animation-intro {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-green;
+    section.container-intro-page.container-intro-page-hero {
+        height: 100%;
+        width: 100%;
+        .images {
+            border-radius: 1.5rem;
+            --duration: 40s;
+            --name: float-up-1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33vw;
+            transform: translateY(200vh);
+            animation: var(--name) var(--duration) linear infinite;
+            z-index: 1;
+            &.video {
+                min-height: 60vh;
+                height: auto;
+                overflow: hidden;
+                video {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &:nth-child(1) {
+                animation-delay: 0s;
+            }
+            &:nth-child(2) {
+                animation-delay: -3s;
+            }
+            &:nth-child(3) {
+                animation-delay: -6s;
+            }
+            &:nth-child(4) {
+                animation-delay: -9s;
+            }
+            &:nth-child(5) {
+                animation-delay: -12s;
+            }
+            &:nth-child(6) {
+                animation-delay: -15s;
+            }
+            &:nth-child(7) {
+                animation-delay: -18s;
+            }
+            &:nth-child(1) {
+                --name: float-up-1;
+                --duration: calc(20s * 1);
+                left: 2vw;
+                z-index: -1;
+            }
+            &:nth-child(2) {
+                --name: float-up-3;
+                --duration: calc(20s * 3);
+                left: 10vw;
+                z-index: -3;
+            }
+            &:nth-child(3) {
+                --name: float-up-2;
+                --duration: calc(20s * 2);
+                left: 42vw;
+                z-index: -2;
+            }
+            &:nth-child(4) {
+                --name: float-up-1;
+                --duration: calc(20s * 1);
+                left: 36vw;
+                z-index: -1;
+            }
+            &:nth-child(5) {
+                --name: float-up-3;
+                --duration: calc(20s * 3);
+                left: 62vw;
+                z-index: -3;
+            }
+            &:nth-child(6) {
+                --name: float-up-2;
+                --duration: calc(20s * 2);
+                left: 15vw;
+                z-index: -2;
+            }
+            &:nth-child(7) {
+                --name: float-up-2;
+                --duration: calc(20s * 2);
+                left: 55vw;
+                z-index: -2;
+            }
+            /* &:nth-child(8) {
+                animation-delay: -21s;
+            }
+            &:nth-child(9) {
+                animation-delay: -24s;
+            }
+            &:nth-child(10) {
+                animation-delay: -27s;
+            }
+            &:nth-child(11) {
+                animation-delay: -30s;
+            } */
+            /* &:nth-child(8) {
+                --name: float-up-3;
+                --duration: calc(20s * 3);
+                left: -vw;
+                z-index: -3;
+            }
+            &:nth-child(9) {
+                --name: float-up-1;
+                --duration: calc(20s * 1);
+                left: 62vw;
+                z-index: -1;
+            }
+            &:nth-child(10) {
+                --name: float-up-2;
+                --duration: calc(20s * 2);
+                left: 0vw;
+                z-index: -2;
+            }
+            &:nth-child(11) {
+                --name: float-up-3;
+                --duration: calc(20s * 2);
+                left: 52vw;
+                z-index: -2;
+            }
+            &:nth-child(7) video {
+                border-bottom-left-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
+            }
+            &:nth-child(8) {
+                --name: float-up-3;
+                --duration: calc(20s * 3);
+                left: 18vw !important;
+                z-index: -3;
+            }
+            &:nth-child(10) {
+                --name: float-up-2;
+                --duration: calc(20s * 2);
+                left: 24vw !important;
+                z-index: -2;
+            } */
+        }
+        @keyframes float-up-3 {
+            from {
+                transform: translateY(200vh) translateZ(-50vh);
+            }
+            to {
+                transform: translateY(-200vh) translateZ(-50vh);
+            }
+        }
+        @keyframes float-up-2 {
+            from {
+                transform: translateY(150vh) translateZ(-25vh);
+            }
+            to {
+                transform: translateY(-150vh) translateZ(-25vh);
+            }
+        }
+        @keyframes float-up-1 {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-100vh);
+            }
+        }
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 200px;
+        width: 60vw;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        background-color: red;
+    }
+}
 
 
 /* ==========================================================================
