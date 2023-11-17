@@ -24,26 +24,14 @@ add_action( 'wp_print_scripts', function(){
     wp_dequeue_script( 'bootstrap5' );
 }, 100 );
 
-// ENQUEUE THE BOOTSTRAP JS BUNDLE (AND EVENTUALLY MORE LIBS) FROM THE CHILD THEME DIRECTORY
-add_action( 'wp_enqueue_scripts', function() {
-    //enqueue js in footer, defer
-    wp_enqueue_script( 'bootstrap5-childtheme', get_stylesheet_directory_uri() . "/js/bootstrap.bundle.min.js#deferload", array(), null, true );
-    
-    //optional: lottie (maybe...)
-    //wp_enqueue_script( 'lottie-player', 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js#deferload', array(), null, true );
-
-    //optional: rellax 
-    //wp_enqueue_script( 'rellax', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js#deferload', array(), null, true );
-
-}, 101);
-
     
     
 // ENQUEUE YOUR CUSTOM JS FILES, IF NEEDED 
-add_action( 'wp_enqueue_scripts', function() {	   
-    
+add_action( 'wp_enqueue_scripts', function() {
+    /* ADD PATH JS BOOTSRAP */	   
+    wp_enqueue_script( 'bootstrap5-childtheme', get_stylesheet_directory_uri() . "/js/bootstrap.bundle.min.js", array(), null, true );
     //UNCOMMENT next row to include the js/custom.js file globally
-    //wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js#deferload', array(/* 'jquery' */), null, true); 
+    wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), null, true); 
 
     //UNCOMMENT next 3 rows to load the js file only on one page
     //if (is_page('mypageslug')) {
