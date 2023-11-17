@@ -123,6 +123,11 @@ img {
     display: none;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 
 /* ==========================================================================
     3.0 - Fonts
@@ -141,8 +146,9 @@ $font-default: SocialVariable;
 
 body {
     font-family: $font-default;
+    color: $color-white;
     background-color: $color-green;
-    font-weight: 300;
+    font-weight: 400;
     * {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -157,6 +163,53 @@ body {
 #lc-header {
     .site-header {
         padding: 12px 0;
+        .container {
+            .row {
+                align-items: center;
+                justify-content: space-between;
+                .container {
+                    &-left,
+                    &-right {
+                        width: fit-content;
+                    }
+                    &-right {
+                        &-menu {
+                            padding: 0;
+                            &-dynamic {
+                                .menu-primarymenu-container {
+                                    ul {
+                                        display: flex;
+                                        gap: 8px;
+                                        li {
+                                            &.current_page_item {
+                                                text-decoration: underline;
+                                                font-weight: 600;
+                                            }
+                                            &:hover {
+                                                cursor: pointer;
+                                                a {
+                                                    font-weight: 600;
+                                                }
+                                                transition: all .6s;
+                                            }
+                                            &:not(:last-child) {
+                                                position: relative;
+                                                padding: 0px 8px 0px 4px;
+                                                &::after {
+                                                    content: "/";
+                                                    position: absolute;
+                                                    right: -4px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

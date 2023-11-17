@@ -26,3 +26,4 @@
 7. Collegato il file /wp-content/themes/picostrap5-child-base/js/custom.js attraverso il file functions nel tema child.
 8. Aggiunta la functions Init per creare una coerenza stilistica al codice
 9. Aggiunta la funzione per prendere il menu da shortcode e dinamicamente popola un altro campo
+10. Aggiunto Stile per la navbar
